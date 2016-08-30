@@ -1,0 +1,17 @@
+<h2> Welcome to Angular!</h2>
+<div ng-app="app">
+  <div ng-controller="testController">
+
+    <ul>
+      <li ng-if="ifPositive(task)" ng-repeat="task in tasks">{{ task.text }}
+        <ul>
+          <li> Done: {{task.done}}</li>
+          <li> Priority: {{task.priority}}</li>
+        </ul>
+        </li>
+    </ul>
+
+    <input type ="text" ng-model="newTask">
+    <button ng-click="addTask()" ng-disabled="newTask.$invalid"> Add Task</button>
+  </div>
+</div>
